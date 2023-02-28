@@ -1,0 +1,13 @@
+.note-card{
+  margin-top: 2%;
+  border:2px solid black;
+  width: 15%;
+  height:30%;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3%;
+  box-shadow:2px 2px 5px 0 rgba(0, 0, 0, .2);
+  background-color:white
+}
