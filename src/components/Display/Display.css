@@ -1,0 +1,9 @@
+.display{
+  border:2px solid black;
+  display: flex;
+  height:90%;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color:#93BFCF;
+}
