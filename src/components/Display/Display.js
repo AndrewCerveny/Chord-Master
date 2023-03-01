@@ -1,15 +1,13 @@
 import React from "react";
 import './Display.css';
-import Note from '../../components/Note/Note' 
-import { Link } from "react-router-dom";
+import NoteIntro from '../NoteIntro/NoteIntro' 
 
 const Display = ({allNotes}) => {
   const allNoteSelections =  allNotes.map((note, index) => 
-    
-      <Note
+    <NoteIntro
       name={note}
       key={index}
-      />
+     />
    
   )
    

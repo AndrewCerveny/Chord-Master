@@ -16,9 +16,6 @@ class Form extends Component {
       <datalist>
         <option value="m"></option>
       </datalist>
-     
-
-
     </form>
   )
  }

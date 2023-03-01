@@ -4,8 +4,8 @@ import rootSound from '../../mockdata/rootSound';
 import Display from '../Display/Display';
 import allRoots from '../../mockdata/allRoots'
 import Navbar from '../Navbar/Navbar';
-import { Route,Link,Switch } from 'react-router-dom';
-import Note from '../Note/Note'
+import { Route,Switch } from 'react-router-dom';
+import NoteSpec from '../NoteSpec/NoteSpec'
 
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
         <Switch>  
           <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes}/>}/>
           <Route exact path='/:baseNote' render={({match})=>
-             <Note noteId={match.params.baseNote}/>
+             <NoteSpec name={match.params.baseNote}/>
           }
           />
          
