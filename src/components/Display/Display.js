@@ -4,11 +4,11 @@ import NoteIntro from '../NoteIntro/NoteIntro'
 
 const Display = ({allNotes}) => {
   const allNoteSelections =  allNotes.map((note, index) => 
-    <NoteIntro
-      name={note}
-      key={index}
-    />
-   
+    <div key={index} className ='note-card'>
+      <NoteIntro
+        name={note}
+      />
+    </div>
   )
    
   return(

@@ -8,9 +8,11 @@ class NoteSpec extends Component {
   this.state = {
     chordSelect : '',
     error: '',
-    baseNote : '',
+    baseNote :'',
     chordSelections: [],
   }
+  // console.log('NOTESPEC',this.props.url);
+  
 }
   render() {
    

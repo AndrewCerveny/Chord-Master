@@ -28,9 +28,11 @@ class App extends Component {
         <Navbar/>
         <Switch>  
           <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes} />}/>
-          <Route exact path='/:baseNote' render={({match})=>
-             <NoteSpec url={match.params.baseNote}/>
-          }
+          <Route exact path='/Root/:baseNote' render={({match}) => 
+          console.log('TEST',match) 
+        }
+            
+        
           />
          
             
