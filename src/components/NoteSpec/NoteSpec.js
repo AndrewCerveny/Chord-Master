@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import Form from "../Form/Form";
+import './NoteSpec.css'
 
 class NoteSpec extends Component {
  constructor() {
@@ -13,7 +14,7 @@ class NoteSpec extends Component {
 }
   render() {
   return(
-    <section className="card">
+    <section className="card-view">
       <h2> Base note here</h2>
       <Form/>
       <p> Notes here </p>
