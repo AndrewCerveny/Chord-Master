@@ -1,0 +1,15 @@
+.note-intro-display{
+  border:1px solid black;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link{
+  text-decoration: none;
+  color:black;
+}
+.note-intro-display:hover {
+  background-color: #93BFCF;
+  cursor:grab;
+}

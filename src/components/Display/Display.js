@@ -1,13 +1,14 @@
 import React from "react";
 import './Display.css';
-import Note from '../../components/Note/Note' 
+import NoteIntro from '../NoteIntro/NoteIntro' 
 
 const Display = ({allNotes}) => {
   const allNoteSelections =  allNotes.map((note, index) => 
-    <Note
-    name={note}
-    key={index}
-    />
+    <div key={index} className ='note-card'>
+      <NoteIntro
+        name={note}
+      />
+    </div>
   )
    
   return(
