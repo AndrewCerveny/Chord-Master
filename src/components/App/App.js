@@ -12,20 +12,22 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allRootNotes:[]
+      allRootNotes:[],
+      selectedCard: ''
     }
   }
   componentDidMount = () => {
    const rootNotes = Object.keys(rootSound);
     this.setState({allRootNotes:allRoots})
   }
+
   
   render() {
     return (
       <main className="App">
         <Navbar/>
         <Switch>  
-          <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes}/>}/>
+          <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes} />}/>
           <Route exact path='/:baseNote' render={({match})=>
              <NoteSpec name={match.params.baseNote}/>
           }
