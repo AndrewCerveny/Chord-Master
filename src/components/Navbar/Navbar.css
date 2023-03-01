@@ -1,0 +1,22 @@
+.nav-area{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-items:center;
+  justify-content: space-around;
+  height: 15%;
+  background-color:#6096B4;
+  margin-bottom: 2%;
+  font-size: xx-large;
+  color:#BDCDD6
+}
+.nav-btn{
+  width: 6rem;
+  height:3rem;
+}
+.nav-btn-wrapper{
+  display: flex;
+  width:25%;
+  height:40%;
+  justify-content: space-evenly;
+}
