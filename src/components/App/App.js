@@ -29,7 +29,7 @@ class App extends Component {
         <Switch>  
           <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes} />}/>
           <Route exact path='/:baseNote' render={({match})=>
-             <NoteSpec name={match.params.baseNote}/>
+             <NoteSpec url={match.params.baseNote}/>
           }
           />
          

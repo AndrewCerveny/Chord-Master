@@ -3,8 +3,8 @@ import Form from "../Form/Form";
 import './NoteSpec.css'
 
 class NoteSpec extends Component {
- constructor() {
-  super()
+ constructor(props) {
+  super(props)
   this.state = {
     chordSelect : '',
     error: '',
@@ -13,6 +13,7 @@ class NoteSpec extends Component {
   }
 }
   render() {
+   
   return(
     <section className="card-view">
       <h2> Base note here</h2>
