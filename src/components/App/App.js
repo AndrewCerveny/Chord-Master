@@ -7,6 +7,7 @@ import Navbar from '../Navbar/Navbar';
 import { Route,Link,Switch } from 'react-router-dom';
 import Note from '../Note/Note'
 
+
 class App extends Component {
   constructor() {
     super()
@@ -25,10 +26,12 @@ class App extends Component {
         <Navbar/>
         <Switch>  
           <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes}/>}/>
-          <Route exact path='/:baseNote' render={({match})=>{
-            return <Note noteId={match.params.baseNote}/>
-          }}
+          <Route exact path='/:baseNote' render={({match})=>
+             <Note noteId={match.params.baseNote}/>
+          }
           />
+         
+            
         </Switch>
       </main>
     );
