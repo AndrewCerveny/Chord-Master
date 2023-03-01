@@ -8,7 +8,7 @@ class Form extends Component {
   
   this.state = {
     baseNote: this.props.note,
-    chordSelect: ''
+    chordSelect: '',
   } 
 }
 
@@ -19,13 +19,17 @@ handleChange = (e) => {
 
   
  render(){
+  const chordDrop = this.props.chordSelections.map((chord, index) => 
+     <option value={chord} key={index}>{chord} </option> 
+  )
   return(
     <form>
       <label> Chord Selector </label>
       <input  list="chords" name="chordSelect" onChange={(e) => this.handleChange(e)}/>
-      <datalist>
-        <option value="m"></option>
+      <datalist id='chords'>
+       {chordDrop}
       </datalist>
+      <button></button>
     </form>
   )
  }

@@ -11,13 +11,9 @@ class NoteSpec extends Component {
     error: '',
     baseNoteI:this.props.name,
     baseNoteD:'',
-    chordSelections: [],
+    chordSelections:[],
   }
 
-  
-  //asharp
-  //f 
-  
 }
 
 componentDidMount = () => {
@@ -37,8 +33,14 @@ let root;
     this.setState({baseNoteD:root}) 
  }
  getMusicNotes(this.state.baseNoteI)
- .then((data) => console.log(data[root]))
- 
+ .then((data) => {
+  const noteFamily = data[root]
+  const chordOptions= Object.keys(noteFamily)
+  this.setState({chordSelections:chordOptions})
+ })
+ handleSubmit= (data) => {
+  console.log(data);
+ }
   
 }
 
@@ -48,7 +50,7 @@ render() {
   return(
     <section className="card-view">
       <h2>{this.state.baseNoteD}</h2>
-      <Form note={this.state.baseNote}/>
+      <Form note={this.state.baseNoteI} chordSelections={this.state.chordSelections} handleSubmit={this.handleSubmit}/>
       <p> Notes here </p>
       <p> intervals here </p>
       <button> Check piano </button>
