@@ -9,5 +9,14 @@
   justify-content: center;
   border-radius: 3%;
   box-shadow:2px 2px 5px 0 rgba(0, 0, 0, .2);
-  background-color:white
+  background-color:white;
+  
+}
+.link{
+  text-decoration: none;
+  color:black;
+}
+.note-card:hover {
+  background-color: #93BFCF;
+  cursor:grab;
 }
