@@ -3,6 +3,7 @@ import './App.css';
 import rootSound from '../../mockdata/rootSound';
 import Display from '../Display/Display';
 import allRoots from '../../mockdata/allRoots'
+import Navbar from '../Navbar/Navbar';
 
 class App extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <h1>Chord Master </h1>
+        <Navbar/>
         <Display allNotes={this.state.allRootNotes}/>
       </main>
     );
