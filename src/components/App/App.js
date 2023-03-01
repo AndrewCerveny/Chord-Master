@@ -20,7 +20,7 @@ class App extends Component {
    const rootNotes = Object.keys(rootSound);
     this.setState({allRootNotes:allRoots})
   }
-
+  
   
   render() {
     return (
@@ -28,12 +28,10 @@ class App extends Component {
         <Navbar/>
         <Switch>  
           <Route exact path="/" render={()=> <Display allNotes={this.state.allRootNotes} />}/>
-          <Route exact path='/Root/:baseNote' render={({match}) => 
-          console.log('TEST',match) 
-        }
-            
-        
-          />
+          <Route exact path='/Root/:baseNote' render={({match}) => {
+           let lowerName = match.params.baseNote
+          return <NoteSpec name={lowerName.toLowerCase()} />  
+        }} />
          
             
         </Switch>
