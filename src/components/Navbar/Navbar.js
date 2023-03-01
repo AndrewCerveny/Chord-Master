@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return(
   <nav className="nav-area">
-   <Link to={'/'}>
+   <Link to={'/'} className='link'>
    <h1> Chord Master </h1> 
    </Link> 
     <section className="nav-btn-wrapper">
