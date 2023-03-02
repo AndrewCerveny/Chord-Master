@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import Form from "../Form/Form";
 import './NoteSpec.css'
 import {getMusicNotes} from '../../apicalls/grabData'
+import { Link } from "react-router-dom";
 
 class NoteSpec extends Component {
  constructor(props) {
@@ -69,7 +70,7 @@ render() {
           <p> Intervals In Chord Scale:{intervalNotes}</p>
         </div>
       </div>
-      <button className="piano-btn"> Piano </button>
+     <Link to={'/piano'}> <button className="piano-btn"> Piano </button>  </Link> 
     </section>
   )
 }
