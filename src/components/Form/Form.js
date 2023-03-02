@@ -9,7 +9,7 @@ class Form extends Component {
   
   this.state = {
     baseNote: this.props.note,
-    chordSelect: '',
+    chordSelect:'',
     error:''
   } 
 }
@@ -25,10 +25,13 @@ handleSubmitClick =(e) => {
   .catch((err) =>this.setState({error:err.message}))
  
 }
+clearForm = () => {
+  this.setState({chordSelect: ''})
+}
   
  render() {
   const chordDrop = this.props.chordSelections.map((chord, index) => 
-     <option value={chord} key={index}>{chord} </option> 
+     <option value={chord} key={index}>{chord}</option> 
   )
   if(this.state.error){
     return(
@@ -42,7 +45,11 @@ handleSubmitClick =(e) => {
       <datalist id='chords'>
        {chordDrop}
       </datalist>
-      <button className="form-btn" onClick={(e) => this.handleSubmitClick(e)}> Submit </button>
+      {!this.state.chordSelect
+      ? <button className="form-btn" disabled > Submit </button>
+      :<button className="form-btn" onClick={(e) => this.handleSubmitClick(e)}> Submit </button>
+      }
+      <button className="form-btn" onClick={(e)=> this.clearForm(e)}> Clear </button>
     </form>
   )
  }

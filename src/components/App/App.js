@@ -18,7 +18,7 @@ class App extends Component {
       allRootNotes:[],
       selectedCard: '',
       error:'',
-      isLoading: true
+      isLoading: true,
     }
   }
   componentDidMount = () => {
@@ -47,7 +47,7 @@ class App extends Component {
           return <NoteSpec name={lowerName.toLowerCase()} handleErr={this.handleAllError} />  
         }} />
           <Route exact path="/piano" render={() => <Piano/>}/>
-          <Route exact path="/*"  render={()=> {<Error/>}}/>  
+          <Route exact path="/*"  render={()=> <Error default={this.state.default}/>}/>  
         </Switch>
       </main>
     );
