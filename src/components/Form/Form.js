@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './Form.css'
 import  {getNoteDetails}  from "../../apicalls/grabData";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 class Form extends Component {
  constructor(props) {
@@ -8,7 +9,8 @@ class Form extends Component {
   
   this.state = {
     baseNote: this.props.note,
-    chordSelect: '',
+    chordSelect:'',
+    error:''
   } 
 }
 
@@ -20,13 +22,22 @@ handleSubmitClick =(e) => {
   e.preventDefault()
   getNoteDetails(this.state.baseNote,this.state.chordSelect)
   .then((data) => this.props.handleSubmit(data))
+  .catch((err) =>this.setState({error:err.message}))
  
+}
+clearForm = () => {
+  this.setState({chordSelect: ''})
 }
   
  render() {
   const chordDrop = this.props.chordSelections.map((chord, index) => 
-     <option value={chord} key={index}>{chord} </option> 
+     <option value={chord} key={index}>{chord}</option> 
   )
+  if(this.state.error){
+    return(
+      <ErrorPage message={this.state.error}/>
+    )
+  }
   return(
     <form className="form">
       <label className="hidden"> Chord Selector </label>
@@ -34,7 +45,11 @@ handleSubmitClick =(e) => {
       <datalist id='chords'>
        {chordDrop}
       </datalist>
-      <button className="form-btn" onClick={(e) => this.handleSubmitClick(e)}> Submit </button>
+      {!this.state.chordSelect
+      ? <button className="form-btn" disabled > Submit </button>
+      :<button className="form-btn" onClick={(e) => this.handleSubmitClick(e)}> Submit </button>
+      }
+      <button className="form-btn" onClick={(e)=> this.clearForm(e)}> Clear </button>
     </form>
   )
  }

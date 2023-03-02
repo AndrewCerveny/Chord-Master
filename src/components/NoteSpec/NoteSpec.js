@@ -3,6 +3,7 @@ import Form from "../Form/Form";
 import './NoteSpec.css'
 import {getMusicNotes} from '../../apicalls/grabData'
 import { Link } from "react-router-dom";
+import ErrorPage from '../ErrorPage/ErrorPage'
 
 class NoteSpec extends Component {
  constructor(props) {
@@ -14,7 +15,8 @@ class NoteSpec extends Component {
     baseNoteD:'',
     chordSelections:[],
     notes: [],
-    intervals:[]
+    intervals:[],
+    error:''
   }
 
 }
@@ -41,6 +43,7 @@ componentDidMount = () => {
     const chordOptions= Object.keys(noteFamily)
     this.setState({chordSelections:chordOptions})
   })
+  .catch((err) => this.setState({error:err.message}))
 }
 
 
@@ -55,12 +58,16 @@ componentDidMount = () => {
 render() {
   const notesInKey = this.state.notes.join(', ')
   const intervalNotes = this.state.intervals.join(', ')
-  
+  if(this.state.error) {
+    return (
+      <ErrorPage message={this.state.error}/>
+    )
+  }
   
   return(
     <section className="card-view">
       <h2> Root {this.state.baseNoteD}</h2>
-      <Form note={this.state.baseNoteI} chordSelections={this.state.chordSelections} handleSubmit={this.handleSubmit}/>
+      <Form note={this.state.baseNoteI} chordSelections={this.state.chordSelections}  handleSubmit={this.handleSubmit}/>
       <div className="display-info">
         <div className="chosen-chord">  
           <h3> Chord Chosen </h3> 
