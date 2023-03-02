@@ -2,7 +2,7 @@ import React from "react";
 import './Display.css';
 import NoteIntro from '../NoteIntro/NoteIntro' 
 
-const Display = ({allNotes}) => {
+const Display = ({allNotes, error}) => {
   const allNoteSelections =  allNotes.map((note, index) => 
     <div key={index} className ='note-card'>
       <NoteIntro
@@ -13,7 +13,10 @@ const Display = ({allNotes}) => {
    
   return(
     <section className="display">
-      {allNoteSelections}
+     { error
+      ? <h2 className="error-message">{error}</h2>
+      : allNoteSelections
+     }
     </section>
   )
 }

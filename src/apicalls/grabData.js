@@ -8,7 +8,13 @@ const getNoteDetails = (note, chord) => {
     }
   }
   return fetch(`https://piano-chords.p.rapidapi.com/chords/${note}/${chord}`, options)
-  .then(response => response.json())
+  .then(res => {
+    if(res.ok) {
+     return res.json()
+    }else{
+      throw new Error(`${res.status} ${res.statusText}: Whoops! No connection. Unable to load content!`)
+    }
+  })
 
 };
 
@@ -22,7 +28,13 @@ const getMusicNotes = (baseNote) => {
 
   }  
   return fetch(`https://piano-chords.p.rapidapi.com/chords/${baseNote}`, options)
-  .then(response => response.json())
+  .then(res => {
+    if(res.ok){
+     return res.json()
+    }else{
+      throw new Error( `${res.status} ${res.statusText}: Whoops! No connection. Unable to load content!`)
+    }
+  })
   
   
 };
@@ -36,7 +48,13 @@ const getBaseNotes = () => {
   }
 
   return fetch('https://piano-chords.p.rapidapi.com/chords', options)
-	.then(response => response.json())
+	.then(res => {
+    if(res.ok) {
+      return res.json()
+    }else{
+      throw new Error(`${res.status} ${res.statusText}: Whoops! No connection. Unable to load content!`)
+    }
+  })
 	
 }
 
