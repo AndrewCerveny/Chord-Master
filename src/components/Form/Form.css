@@ -1,0 +1,41 @@
+
+.form{ 
+  width: 40%;
+  height:6%;
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 50%;
+  font-size: large;
+}
+.form-btn{
+  margin-left: 4%;
+  padding: 2%;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+}
+.form-btn:hover{
+  background-color: rgba(255, 217, 0, 0.501);
+  color: white;
+  cursor: pointer;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+  display:none;
+}

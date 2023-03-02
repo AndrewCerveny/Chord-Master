@@ -3,20 +3,41 @@
   flex-direction: row;
   width: 90%;
   align-items:center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 15%;
-  background-color:#6096B4;
-  margin-bottom: 2%;
+  background-color:#212121;
+  margin-bottom: 3%;
   font-size: xx-large;
-  color:#BDCDD6
+  border-radius: 16px;
+  font-weight: 900;
+
 }
 .nav-btn{
   width: 6rem;
   height:3rem;
+  border-radius:9%;
+  font-weight: 700;
+}
+.nav-btn:hover{
+  background-color: rgba(255, 217, 0, 0.501);
+  color: white;
+  cursor: pointer;
 }
 .nav-btn-wrapper{
   display: flex;
   width:25%;
   height:40%;
   justify-content: space-evenly;
+}
+.title {
+  color: rgba(255, 217, 0, 0.501);
+}
+.title-wrap{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.title-link{
+  width: 45%;
+
 }

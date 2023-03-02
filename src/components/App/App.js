@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
 import './App.css';
-import rootSound from '../../mockdata/rootSound';
 import Display from '../Display/Display';
-import allRoots from '../../mockdata/allRoots'
 import Navbar from '../Navbar/Navbar';
 import { Route,Switch } from 'react-router-dom';
 import NoteSpec from '../NoteSpec/NoteSpec'
+import { getBaseNotes } from '../../apicalls/grabData';
+import rootNotes from '../../mockdata/allRoots';
+import Piano from '../Piano/Piano';
+
 
 
 class App extends Component {
@@ -17,8 +19,11 @@ class App extends Component {
     }
   }
   componentDidMount = () => {
-   const rootNotes = Object.keys(rootSound);
-    this.setState({allRootNotes:allRoots})
+    getBaseNotes()
+      .then((data) => {
+        // const rootNotes = Object.keys(data);
+        this.setState({allRootNotes:rootNotes}) 
+      })
   }
   
   
@@ -32,6 +37,7 @@ class App extends Component {
            let lowerName = match.params.baseNote
           return <NoteSpec name={lowerName.toLowerCase()} />  
         }} />
+        <Route exact path="/piano" render={() => <Piano/>}/>
          
             
         </Switch>
