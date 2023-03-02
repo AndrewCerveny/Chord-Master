@@ -1,0 +1,35 @@
+
+.form{ 
+  width: 40%;
+  height:8%;
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 50%;
+  font-size: large;
+}
+.form-btn{
+  margin-left: 4%;
+  padding: 3%;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+  display:none;
+}

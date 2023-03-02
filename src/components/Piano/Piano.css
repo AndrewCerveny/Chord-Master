@@ -1,0 +1,30 @@
+.piano-img {
+  width:95%;
+  height:70%;
+  margin-top:2%;
+}
+
+.piano-wrapper{
+ border:2px solid black; 
+ width: 70%;
+ height: 70%;
+ background-color:#212121;
+ display: flex;
+ justify-content: center;
+}
+.piano-pro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height:90%;
+}
+.progression{
+  background-color: #212121;
+  height:70%;
+  color:rgba(255, 217, 0, 0.501);
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

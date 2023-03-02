@@ -1,8 +1,8 @@
 /*
-#6096B4  dark blue
-#93BFCF  medium blue
-#BDCDD6  light grey
-#EEE9DA light brown 
+#212121 black
+#323232 grey
+#0D7377 teal blue
+#14FFEC neon blue
 */
 
 
@@ -18,7 +18,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #EEE9DA;
+  background-color: #212121;
   overflow-y: scroll;
+  background-image: url('../../images/whitebackdrop.jpg');
+  
 }
 
