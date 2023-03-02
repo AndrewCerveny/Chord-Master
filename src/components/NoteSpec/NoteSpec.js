@@ -63,14 +63,21 @@ render() {
       <Form note={this.state.baseNoteI} chordSelections={this.state.chordSelections} handleSubmit={this.handleSubmit}/>
       <div className="display-info">
         <div className="chosen-chord">  
-          <h3> Chord Chosen : {this.state.chordName}</h3>
+          <h3> Chord Chosen </h3> 
+          <h4> {this.state.chordName} </h4>
         </div>
         <div className="note-area">
-          <p> Notes In Chord: {notesInKey} </p>
-          <p> Intervals In Chord Scale:{intervalNotes}</p>
+          <h3> Notes In Chord</h3>
+          <h4>{notesInKey} </h4>
+        </div>
+        <div className="interval-area">
+          <h3>Chord Intervals </h3>
+          <h4>{intervalNotes}</h4>
         </div>
       </div>
-     <Link to={'/piano'}> <button className="piano-btn"> Piano </button>  </Link> 
+     <Link className="link-btn-wrap" to={'/piano'}> 
+      <button className="piano-btn"> Piano </button> 
+    </Link> 
     </section>
   )
 }
