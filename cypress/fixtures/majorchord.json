@@ -1,0 +1,9 @@
+{ "C": {
+      "major": {
+          "name": "C-major",
+          "notes": ["C","E", "G" ],
+          "intervals": ["1","3","5" ],
+          "midiKeys": [60, 64, 67 ]
+        }
+  }
+}
