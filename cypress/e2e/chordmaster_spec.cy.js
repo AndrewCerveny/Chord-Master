@@ -55,7 +55,7 @@ describe('template spec', () => {
 
       cy.get('.chosen-chord > h4').should('be.visible')
       cy.get('.note-area > h4').should('be.visible')
-      cy.get('.interval-area > h4').should('be.visible') 
+      cy.get('.interval-area > h4').should('be.visible')
   })
 
   it('Should clear a users input on clear button submission', function(){
@@ -89,7 +89,7 @@ describe('template spec', () => {
     cy.get('.title-wrap > img').click()
     cy.url().should('eq','http://localhost:3000/')
   })
-  it.only('Should route the user home by home button', function(){
+  it('Should route the user home by home button', function(){
     cy.visit('http://localhost:3000/piano')
     cy.get('.nav-btn').contains('Home').click()
     cy.url().should('eq','http://localhost:3000/')
@@ -98,7 +98,23 @@ describe('template spec', () => {
     cy.get('.nav-btn').contains('See Piano').click()
     cy.url().should('eq','http://localhost:3000/piano')
   })
-
-
+  it('Should show an error page when the URl is a bad page',function(){
+    cy.visit('http://localhost:3000/piano/hmmm')
+      .get('.err').contains("🛠️Something went Wrong! Try again later or return home! 🔧")
+  })
+  it.only('should show an error page with a 404 on bad fetch request',function(){
+    cy.intercept('GET', 'https://piano-chords.p.rapidapi.com/chordbtw/c/major',{statusCode: 404})
+     cy.get('.note-intro-display').click()
+      cy.url().should('eq','http://localhost:3000/Root/C')
+      cy.get('.form')
+      .within(()=>{
+        cy.get('input[name=chordSelect]')
+        .type('major')
+        cy.get('.form-btn')
+          .click()
+      }) 
+      cy.get('.error-message1').contains('404')
+    })
+    
 
 })
