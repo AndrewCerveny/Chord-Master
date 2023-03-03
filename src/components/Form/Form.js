@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import './Form.css'
 import  {getNoteDetails}  from "../../apicalls/grabData";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import PropTypes from 'prop-types'
 
 class Form extends Component {
  constructor(props) {
@@ -55,4 +56,10 @@ clearForm = () => {
  }
 }
 export default Form; 
+
+Form.propTypes = {
+  note: PropTypes.string.isRequired,
+  chordSelections: PropTypes.array.isRequired,
+  handleSubmit: PropTypes.func.isRequired
+}
 
