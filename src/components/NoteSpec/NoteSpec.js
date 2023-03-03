@@ -4,6 +4,7 @@ import './NoteSpec.css'
 import {getMusicNotes} from '../../apicalls/grabData'
 import { Link } from "react-router-dom";
 import ErrorPage from '../ErrorPage/ErrorPage'
+import PropTypes from 'prop-types'
 
 class NoteSpec extends Component {
  constructor(props) {
@@ -90,3 +91,7 @@ render() {
 }
 }
 export default NoteSpec;
+
+NoteSpec.propTypes = {
+  name:PropTypes.string.isRequired,
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import './ErrorPage.css'
+import PropTypes from 'prop-types'
+
 
 const Error = ({message}) => {
 return(
@@ -10,3 +12,7 @@ return(
   )
 } 
 export default Error;
+
+Error.protoType = {
+  message: PropTypes.string.isRequired
+}
