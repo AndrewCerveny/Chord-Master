@@ -50,7 +50,7 @@ clearForm = () => {
       ? <button className="form-btn" disabled > Submit </button>
       :<button className="form-btn" onClick={(e) => this.handleSubmitClick(e)}> Submit </button>
       }
-      <button className="form-btn" onClick={(e)=> this.clearForm(e)}> Clear </button>
+      <button className="form-btn-c" onClick={(e)=> this.clearForm(e)}> Clear </button>
     </form>
   )
  }

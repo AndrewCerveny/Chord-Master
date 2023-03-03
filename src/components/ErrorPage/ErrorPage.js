@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 const Error = ({message}) => {
 return(
-  <section>
-    <h2 className="error-message"> 🛠️Something went Wrong! Try again later or return home! 🔧</h2>
-    <p className="error-message"> { message} </p>
+  <section className="error-view">
+    <h2 className="error-message err"> 🛠️Something went Wrong! Try again later or return home! 🔧</h2>
+    <p className="error-message1"> { message} </p>
   </section>
   )
 } 

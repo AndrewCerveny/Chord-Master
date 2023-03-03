@@ -15,7 +15,7 @@ const Display = ({allNotes, error}) => {
   return(
     <section className="display">
      { error
-      ? <h2 className="error-message">{error}</h2>
+      ? <h2 className="error-message2">{error}</h2>
       : allNoteSelections
      }
     </section>

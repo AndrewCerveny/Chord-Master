@@ -7,7 +7,7 @@ const getNoteDetails = (note, chord) => {
       'X-RapidAPI-Host': 'piano-chords.p.rapidapi.com'
     }
   }
-  return fetch(`https://piano-chords.p.rapidapi.com/chords/${note}/${chord}`, options)
+  return fetch(`https://piano-chords.p.rapidapi.com/chordbwb/${note}/${chord}`, options)
   .then(res => {
     if(res.ok) {
      return res.json()

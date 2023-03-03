@@ -1,4 +1,6 @@
-.error-message{
+.error-message,
+.error-message1,
+.error-message2{
   color:red;
   font-size: 2rem;
 }
