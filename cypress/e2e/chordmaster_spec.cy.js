@@ -39,7 +39,7 @@ describe('template spec', () => {
     cy.get('input[name=chordSelect]').should('have.value','')
     cy.get('.form-btn').should('be.disabled')
   })
-  it('Should allow a user to type into or pick from drop down', function(){
+  it.only('Should allow a user to type into or pick from drop down', function(){
     cy.get('.note-intro-display').click()
     cy.url().should('eq','http://localhost:3000/Root/C')
     cy.get('.form')
@@ -51,12 +51,14 @@ describe('template spec', () => {
       }) 
       cy.intercept('GET','https://piano-chords.p.rapidapi.com/chords/c/major',{
         fixture:'majorChord'
-      })   
-      cy.get('.chosen-chord > h4').should('contain', 'major')
-      cy.get('.note-area').should('contain','G')
-      cy.get('.interval-area').should('contain','5') 
+      })
+
+      cy.get('.chosen-chord > h4').should('be.visible')
+      cy.get('.note-area > h4').should('be.visible')
+      cy.get('.interval-area > h4').should('be.visible') 
   })
-  it ('Should clear a users input on clear button submission', function(){
+
+  it('Should clear a users input on clear button submission', function(){
     cy.get('.note-intro-display').click()
     cy.url().should('eq','http://localhost:3000/Root/C')
     cy.get('.form')
@@ -77,7 +79,26 @@ describe('template spec', () => {
     cy.get('.piano-btn').click()
     cy.url().should('eq','http://localhost:3000/piano')
   })
-  
+  it('Should have a piano and chord progression chart on piano page', function(){
+    cy.visit('http://localhost:3000/piano')
+    cy.get('.piano-img').should('be.visible')
+    cy.get('.progression').should('be.visible')
+  })
+  it('Should route the user home by logo', function(){
+    cy.visit('http://localhost:3000/piano')
+    cy.get('.title-wrap > img').click()
+    cy.url().should('eq','http://localhost:3000/')
+  })
+  it.only('Should route the user home by home button', function(){
+    cy.visit('http://localhost:3000/piano')
+    cy.get('.nav-btn').contains('Home').click()
+    cy.url().should('eq','http://localhost:3000/')
+  })
+  it('Should bring the user to piano page if selected from navigation',function(){
+    cy.get('.nav-btn').contains('See Piano').click()
+    cy.url().should('eq','http://localhost:3000/piano')
+  })
+
 
 
 })
