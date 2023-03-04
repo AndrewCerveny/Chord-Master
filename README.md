@@ -20,7 +20,7 @@
 
 
 ## Setup Instructions
-1. Fork the Repo from the 
+1. Fork the Repo from [ChordMaster](https://github.com/AndrewCerveny/ChordMaster)
 2. Clone the repo
    ```sh
    git clone 
