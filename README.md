@@ -23,7 +23,7 @@
 1. Fork the Repo from [ChordMaster](https://github.com/AndrewCerveny/ChordMaster)
 2. Clone the repo
    ```sh
-   git clone 
+   git clone  git@github.com:AndrewCerveny/ChordMaster.git
    ```
 3. Install NPM packages
    ```sh
@@ -39,18 +39,21 @@
    ```
 
 ## API Reference
-GET Only: "https://rapidapi.com/jsdisco/api/piano-chords"
+GET Only:  [Piano Chords](https://rapidapi.com/jsdisco/api/piano-chords)
 
-## Contributor
+## Contributors
+
 solo project
-Andrew Cerveny 
+
+Andrew Cerveny: [Cerveny GitHub](https://github.com/AndrewCerveny)
+
 6 months Turing Curriculum 
 
 
 ## Future extension
-A user can have a login page
-A user can save a chord progression and it would be displayed in an area called my current song.
-Have the website embed sound.  
+- A user can have a login page
+- A user can save a chord progression and it would be displayed in an area called my current song.
+- Have the website embed sound.  
 
 ## Challenges 
 
