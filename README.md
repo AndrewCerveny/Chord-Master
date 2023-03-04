@@ -13,7 +13,7 @@
 
 Deployment:
 
-[Chord Master](chord-master-rkyd0yse4-andrewcerveny.vercel.app)
+[Chord Master](https://chord-master-rkyd0yse4-andrewcerveny.vercel.app/)
 
 Deployed 
 
