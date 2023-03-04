@@ -8,7 +8,7 @@
 - Chord Master is an invaluable tool for musicians seeking to create original and expressive music. While there are only 12 base notes in music, using them to craft truly innovative chord progressions can be a daunting task. Fortunately, Chord Master simplifies this process by providing a comprehensive database of chord progressions that always match the key of the song. With this resource, musicians can effortlessly incorporate harmonious chords that add depth and complexity to their compositions. Lastly, Chord Master includes a visual representation of a piano, making it simple for musicians to see the notes and their positions to a selected chord. With Chord Master, musicians can expand their creative abilities and take their musical prowess to new heights.
  
 ## Screenshots / deployment 
-
+![ChordMaster](https://user-images.githubusercontent.com/104449342/222868587-a0844791-b5ec-4f12-bf38-d4095a022c43.gif)
 
 ## Tech/framework used
 <div>
@@ -65,3 +65,4 @@ Andrew Cerveny: [Cerveny GitHub](https://github.com/AndrewCerveny)
 ## Challenges 
 
 Dynamic routing was tricky because in music there are '#' symbols connected to some of the notes. THe '#' key is a special character in URLs finding a way to manipulate the data and account for that was an unexpected challenge. 
+
