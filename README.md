@@ -9,6 +9,7 @@
  
 ## Screenshots / deployment 
 ![ChordMaster](https://user-images.githubusercontent.com/104449342/222868587-a0844791-b5ec-4f12-bf38-d4095a022c43.gif)
+Deployed [ChordMaster](chord-master-8ycd2sdwf-andrewcerveny.vercel.app)
 
 ## Tech/framework used
 <div>
