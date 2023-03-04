@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Project title/ Assignment given/ approx time spent on build
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Project Name : Chord Master
+- Assignment: Showcase solo for MOD 3 at Turing
+- Alloted time : 5 days  
+## Motivation
 
-## Available Scripts
+- Chord Master is an invaluable tool for musicians seeking to create original and expressive music. While there are only 12 base notes in music, using them to craft truly innovative chord progressions can be a daunting task. Fortunately, Chord Master simplifies this process by providing a comprehensive database of chord progressions that always match the key of the song. With this resource, musicians can effortlessly incorporate harmonious chords that add depth and complexity to their compositions. Lastly, Chord Master includes a visual representation of a piano, making it simple for musicians to see the notes and their positions to a selected chord. With Chord Master, musicians can expand their creative abilities and take their musical prowess to new heights.
+ 
+## Screenshots / deployment 
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech/framework used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+ A user will see a display of all root notes
+ A user can pick a root note and see the notes variations
+ A user can see a piano layout of the notes to make more sense. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
+1. Fork the Repo from the 
+2. Clone the repo
+   ```sh
+   git clone 
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Run npm start
+   ```sh
+   npm start
+   ```
+5. Use the Link that is given in the Terminal & Open in Browser
+   ```sh
+   Example: http://localhost:3000/
+   ```
 
-### `npm run build`
+## API Reference
+GET Only: "https://rapidapi.com/jsdisco/api/piano-chords"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributor
+solo project
+Andrew Cerveny 
+6 months Turing Curriculum 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future extension
+A user can have a login page
+A user can save a chord progression and it would be displayed in an area called my current song.
+Have the website embed sound.  
 
-### `npm run eject`
+## Challenges 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dynamic routing was tricky because in music there are '#' symbols connected to some of the notes. THe '#' key is a special character in URLs finding a way to manipulate the data and account for that was an unexpected challenge. 
