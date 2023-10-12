@@ -73,8 +73,8 @@ h4 {
 @media only screen and (max-width: 790px) {
   .piano-btn {
     position: relative;
-    bottom: 2rem;
-    right: 2.3rem;
+    bottom: 4rem;
+    right: 3rem;
     width: 9rem;
     font-size: 18px;
     padding: 1.5%;
